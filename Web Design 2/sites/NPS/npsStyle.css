@@ -1,0 +1,1432 @@
+@charset "UTF-8";
+
+ @keyframes imageAnimation { 
+    0% { opacity: 0; animation-timing-function: ease-in; }
+    2% { opacity: 1; animation-timing-function: ease-out; }
+    17% { opacity: 1 }
+    19% { opacity: 0 }
+    100% { opacity: 0 }
+}
+
+.contactBG {
+	background: url(../../images/NPS/resources/parkPics/SMOLlakePoint.jpeg) no-repeat center center fixed / cover;
+}
+
+.newsBG {
+	background: url(../../images/NPS/resources/parkPics/mountainLake.jpeg) no-repeat center center fixed / cover;
+}
+
+.exploreBG {
+	background: url(../../images/NPS/resources/parkPics/pexels-photo-547114.jpeg) no-repeat center center fixed / cover;
+}
+
+.aboutBG {
+	background: url(../../images/NPS/resources/parkPics/lakeForest.jpeg) no-repeat center center fixed / cover;
+}
+
+.planBG {
+	background: url(../../images/NPS/resources/parkPics/lakeNight.jpeg) no-repeat center center fixed / cover;
+}
+
+.getiNvolvedBG {
+	background: url(../../images/NPS/resources/parkPics/desertWalking.jpg) no-repeat center center fixed / cover;
+}
+
+.privacyBG {
+	background: url(../../images/NPS/resources/parkPics/fallFalls.jpeg) no-repeat center center fixed / cover;
+}
+
+body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+}
+
+h1 {
+	font-weight: 900;
+	font-size: 20pt;
+	line-height: 21pt;
+}
+
+input {
+	border-radius: 5px;
+	border: none;
+	font-size: 12pt;
+	padding: 0px 0px 0px 5pt;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,.1);
+}
+
+textarea {
+	border-radius: 5px;
+	border: none;
+	font-size: 12pt;
+	padding: 5px 0px 0px 5pt;
+}
+
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+
+.cb-slideshow,
+.cb-slideshow:after { 
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: -2; 
+}
+.cb-slideshow:after { 
+    content: '';
+    background: transparent repeat top left; 
+}
+.cb-slideshow li span { 
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    color: transparent;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-repeat: none;
+    opacity: 0;
+    z-index: 0;
+    animation: imageAnimation 72s linear infinite 0s; 
+}
+.cb-slideshow li:nth-child(1) span { 
+    background-image: url(../../images/NPS/resources/parkPics/kidSitting.jpg) 
+}
+.cb-slideshow li:nth-child(2) span { 
+    background-image: url(../../images/NPS/resources/parkPics/bigTree.jpeg);
+    animation-delay: 12s; 
+}
+.cb-slideshow li:nth-child(3) span { 
+    background-image: url(../../images/NPS/resources/parkPics/lakeForest.jpeg);
+    animation-delay: 24s; 
+}
+.cb-slideshow li:nth-child(4) span { 
+    background-image: url(../../images/NPS/resources/parkPics/lakeNight.jpeg);
+    animation-delay: 36s; 
+}
+.cb-slideshow li:nth-child(5) span { 
+    background-image: url(../../images/NPS/resources/parkPics/nightArch.jpg);
+    animation-delay: 48s; 
+}
+.cb-slideshow li:nth-child(6) span { 
+    background-image: url(../../images/NPS/resources/parkPics/pexels-photo-547114.jpeg);
+    animation-delay: 60s; 
+}
+
+.vibrancyLight {
+	background-color: rgba(255,255,255,0.70);
+	-webkit-backdrop-filter:blur(10px);
+	box-shadow: 3px 0px 40px 2px rgba(0,0,0,.3);
+}
+.vibrancyDark {
+	-webkit-backdrop-filter:blur(20px);
+	background-color: rgba(0,0,0,.8);
+	color: white;
+}
+
+/*desktop*/
+@media (max-width:2000px) and (min-width:1080px){ 
+
+.desktop {
+	display: block;
+}
+	
+.mobile {
+	display: none;
+}
+	
+.nav {
+	top: 0;
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+.navList {
+	list-style: none;
+	float: right;
+	width: 70%;
+	line-height: 20pt;
+	margin-right: 9.4%;
+	margin-top: 25px;
+	
+	font-weight: 500;
+	font-size: 17pt;
+	
+	transition: color .2s;
+}
+
+.navListI:hover {
+	color: rgba(138,138,138,1.00);
+	transition: color .2s;
+}
+
+.navListI:active {
+	text-decoration: underline;
+}
+
+.navListI {
+	float: right;
+	display: inline-block;
+	transition: color .2s;
+	text-align: center;
+	margin-left: 5%;
+}
+
+.searchBox {
+	border-radius: 0px 0px 10px 10px;
+	padding: 3px 3px 3px 10px;
+	height: 25px;
+	width: 150px;
+	transition: width 1s;
+	float: right;
+	top: 72px;
+	right: 55px;
+	z-index: 90;
+	
+	position: fixed;
+	border: none;
+	
+	font-size: 12pt;
+	color: rgba(0,0,0,.6);
+}
+
+.searchBox::placeholder {
+	color: rgba(0,0,0,.6);
+}
+
+.searchBox:focus {
+	background-color: rgba(255,255,255,1);
+	transition: width .5s;
+	padding: 3px 3px 3px 10px;
+	transition-timing-function: ease-in-out;
+	width: 400px;
+	z-index: 101;
+	outline: none;
+	border-radius: 10px;
+}
+
+.locationIndicator {
+	
+}
+
+.nextIcon {
+	height: 50px;
+	float: left;
+	
+}
+
+.newsPic {
+	height: 130px;
+	width: 130px;
+	border-radius: 10px;
+	float: right;
+	overflow: hidden;
+	margin: 10px 10px 10px 40px;
+}
+
+.profilePic {
+	height: 13vw;
+	top:0;
+	max-height: 130px;
+	width: 15vw;
+	max-width: 150px;
+	position: fixed;
+	z-index: 101;
+	left: 70px;
+	
+	background-color: white;
+	border-radius: 0px 0px 15px 15px;
+	background-image: url(../../images/NPS/resources/Logo/logo.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat
+}
+
+.blurb {
+	border-radius: 10px;
+	top:0;
+	
+	float: left;
+	
+	font-size: 13pt;
+	line-height: 16pt;
+	font-weight: 500;
+}
+
+.blurb a{
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+.blurbHomePosition {
+	width: 30%;
+	margin-left: 90px;
+	margin-top:26%;
+	position: absolute;
+	padding: 15px;
+}
+
+.blurbNews1Position {
+	margin: 200px 70px 0px;
+	padding: 15px;
+}
+
+.blurbNewsLastPosition {
+	margin: 50px 70px 200px;
+	padding: 15px;
+}
+
+.blurbNewsPosition {
+	margin: 50px 70px 0px;
+	padding: 15px;
+}
+
+content {
+	margin-top: 180px;
+	height: 600pt;
+}
+
+footer {
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	height: 85px;
+	bottom: 0px;
+}
+
+.footerList {
+	list-style: none;
+	line-height: 30px;
+	width: 50%;
+	margin-left: 0px;
+	margin-top: 16px;
+	float: left; 
+	
+	columns: 3;
+	
+	font-weight: bold;
+	font-size: 14pt;
+	
+	transition: color .2s;
+	
+	border-right: thin solid white;
+}
+
+.footerListI {
+	float: left;
+	width: 100%;
+	transition: color .2s;
+	line-height: 23pt;
+	vertical-align: middle;
+	display: block;
+}
+
+.footerListI:hover {
+	color: rgba(138,138,138,1.00);
+	transition: color .2s;
+}
+
+.smolImg {
+	border-radius: 2px;
+	margin-right: 8px;
+	vertical-align: middle;
+}
+
+.socialList {
+	list-style: none;
+	float: right;
+	width: 42.5%;
+}
+
+.socialListI {
+	float: right;
+	margin-top: 10px;
+	width: 20%;
+}
+
+.smolSoc:hover {
+	transition: filter .2s;
+	filter: brightness(.5);
+}
+	
+.formHolder {
+	width: 40%;
+	padding: 20pt;
+	margin: 180px 5%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	float: right;
+}
+	
+.formTextStyle {
+	margin: 5pt auto 20pt;
+	height: 20pt;
+	width: 96%;
+}
+
+.formButtonStyle {
+	margin: 0px auto;
+	width: 40%;
+	display: block;
+	appearance: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	background: #8a8a8a;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	border: none;
+}
+	
+textarea {
+ 	margin: 5pt auto 20pt;
+	height: 100pt;
+	width: 98%;
+}
+	
+.ouriNfo {
+	padding: 20pt;
+	margin: 180px 5% 0px;
+	width: 40%;
+	border-radius: 10px;
+	box-sizing: border-box;
+	float: left;
+	position: fixed;
+	font-size: 16pt;
+}
+	
+.ouriNfo a {
+	text-decoration: underline;
+	font-weight: 500;
+}
+	
+.youTubeVid {
+	width: 30%;
+	height: 150pt;
+	display: block;
+	margin: 0px 6%;
+	box-sizing: border-box;
+	-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); /*ios 7 border-radius-bug */
+	-webkit-transform: rotate(0.000001deg); /*mac os 10.6 safari 5 border-radius-bug */
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px;
+	border-radius: 10px; 
+	overflow: hidden;
+}
+
+.exploreHolder {
+	width: 30%;
+	height: 160pt;
+	border-radius: 10px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.findYourPark {
+	width: 20%;
+	height: 150pt;
+	float: right;
+	margin: 0pt auto 90pt;
+	border-radius: 10px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.selectCenter {
+	width: 60%;
+	display: block;
+	margin: 10pt auto;
+}
+	
+.flex {
+	display: flex;
+
+}
+	
+	.galleryiMages {
+		height: 300px;
+		width: 90%;
+		display: block;
+		position: absolute;
+		top: 200pt;
+		margin: 200pt 6%;
+	}
+
+	.galTit {
+		position: absolute;
+		top: 340pt;
+		margin-left: 6%;
+		padding: 1pt 10pt;
+		border-radius: 10px;
+		
+	}
+	
+
+
+	.aboutiTem {
+		width: 20%;
+		display: block;
+		box-sizing: border-box;
+		margin: 170pt 2% 0pt;
+		padding: 15pt;
+		border-radius: 10px;
+		float: left;
+	}
+	
+	.aboutiTem  a{
+		text-decoration: underline;
+		font-size: 18pt;
+		font-weight: 700;
+	}
+	
+	.privacyDetails {
+		width: 87%;
+		box-sizing: border-box;
+		margin: 180px auto 150px;
+		padding: 20pt;
+		border-radius: 10px;
+	}
+	
+}
+
+@media (max-width:1080px) and (min-width:885px){ 
+	
+.desktop {
+	display: block;
+}
+	
+.mobile {
+	display: none;
+}	 
+
+.nav {
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+}
+
+.navList {
+	list-style: none;
+	float: right;
+	width: 70%;
+	line-height: 20pt;
+	margin-right: 9.4%;
+	margin-top: 25px;
+	
+	font-weight: 500;
+	font-size: 17pt;
+	
+	transition: color .2s;
+}
+
+.navListI:hover {
+	color: rgba(138,138,138,1.00);
+	transition: color .2s;
+}
+
+.navListI:active {
+	text-decoration: underline;
+}
+
+.navListI {
+	float: right;
+	display: inline-block;
+	transition: color .2s;
+	text-align: center;
+	margin-left: 5%;
+}
+
+.searchBox {
+	border-radius: 0px 0px 10px 10px;
+	padding: 3px 3px 3px 10px;
+	height: 25px;
+	width: 150px;
+	transition: width 1s;
+	float: right;
+	top: 72px;
+	right: 55px;
+	z-index: 90;
+	
+	position: fixed;
+	border: none;
+	
+	font-size: 12pt;
+	color: rgba(0,0,0,.6);
+}
+
+.searchBox::placeholder {
+	color: rgba(0,0,0,.6);
+}
+
+.searchBox:focus {
+	background-color: rgba(255,255,255,1);
+	transition: width .5s;
+	padding: 3px 3px 3px 10px;
+	transition-timing-function: ease-in-out;
+	width: 400px;
+	z-index: 101;
+	outline: none;
+	border-radius: 10px;
+}
+
+.locationIndicator {
+	
+}
+
+.nextIcon {
+	height: 50px;
+	float: left;
+	
+}
+
+.newsPic {
+	height: 130px;
+	width: 130px;
+	border-radius: 10px;
+	float: right;
+	overflow: hidden;
+	margin: 10px 10px 10px 40px;
+}
+
+.profilePic {
+	height: 13vw;
+	max-height: 130px;
+	width: 15vw;
+	max-width: 150px;
+	position: fixed;
+	z-index: 101;
+	left: 70px;
+	
+	background-color: white;
+	border-radius: 0px 0px 15px 15px;
+	background-image: url(../../images/NPS/resources/Logo/logo.png);
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat
+}
+
+.blurb {
+	border-radius: 10px;
+	
+	float: left;
+	
+	font-size: 13pt;
+	line-height: 16pt;
+	font-weight: 500;
+}
+
+.blurb a{
+	text-decoration: underline;
+	font-weight: 900;
+}
+
+.blurbHomePosition {
+	width: 30%;
+	margin-left: 90px;
+	margin-top:26%;
+	position: absolute;
+	padding: 15px;
+}
+
+.blurbNews1Position {
+	margin: 200px 70px 0px;
+	padding: 15px;
+}
+
+.blurbNewsLastPosition {
+	margin: 50px 70px 200px;
+	padding: 15px;
+}
+
+.blurbNewsPosition {
+	margin: 50px 70px 0px;
+	padding: 15px;
+}
+
+content {
+	margin-top: 0px;
+}
+
+footer {
+	width: 100%;
+	position: fixed;
+	z-index: 100;
+	height: 85px;
+	bottom: 0px;
+}
+	
+.footerList {
+	list-style: none;
+	width: 90%;
+	display: inline-flex;
+	flex-direction: row-reverse;
+	justify-content: center;
+	
+	font-weight: bold;
+	font-size: 12pt;
+	
+	transition: color .2s;
+}
+
+.footerListI {
+	margin: 0px 2%;
+	transition: color .2s;
+	line-height: 23pt;
+	text-align: center;
+}
+
+.footerListI:hover {
+	color: rgba(138,138,138,1.00);
+	transition: color .2s;
+}
+
+.smolImg {
+	border-radius: 2px;
+	margin-left: 30pt;
+	margin-right: 30pt;
+}
+	
+.socialList {
+	display: none;
+}
+	
+		
+.formHolder {
+	width: 40%;
+	padding: 20pt;
+	margin: 180px 5%;
+	box-sizing: border-box;
+	border-radius: 10px;
+	float: right;
+}
+	
+.formTextStyle {
+	margin: 5pt auto 20pt;
+	height: 20pt;
+	width: 96%;
+}
+
+.formButtonStyle {
+	margin: 0px auto;
+	width: 40%;
+	display: block;
+	appearance: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	background: #8a8a8a;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+	border: none;
+}
+	
+textarea {
+ 	margin: 5pt auto 20pt;
+	height: 100pt;
+	width: 98%;
+}
+	
+.ouriNfo {
+	padding: 20pt;
+	margin: 180px 5% 0px;
+	width: 40%;
+	border-radius: 10px;
+	box-sizing: border-box;
+	float: left;
+	position: fixed;
+}
+	
+.ouriNfo a {
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+
+	.aboutiTem {
+		width: 20%;
+		display: block;
+		box-sizing: border-box;
+		margin: 170pt 2% 0pt;
+		padding: 15pt;
+		border-radius: 10px;
+		float: left;
+	}
+	
+	.aboutiTem  a{
+		text-decoration: underline;
+		font-size: 18pt;
+		font-weight: 700;
+	}
+	
+	.privacyDetails {
+		width: 87%;
+		box-sizing: border-box;
+		margin: 180px auto 150px;
+		padding: 20pt;
+		border-radius: 10px;
+	}
+	
+}
+
+/*MOBiLE*/
+@media (max-width:885px) and (min-width:400px) { 
+	
+.desktop {
+	display: none;
+}
+	
+.mobile {
+	display: block;
+}
+
+.MOBvibrancyLight {
+	background-color: rgba(255,255,255,0.70);
+	-webkit-backdrop-filter:blur(10px);
+	box-shadow: 3px 0px 40px 2px rgba(0,0,0,.3);
+}
+
+.MOBvibrancyDark {
+	background-color: rgba(0,0,0,0.70);
+	-webkit-backdrop-filter:blur(20px);
+	box-shadow: 3px 0px 40px 2px rgba(0,0,0,.3);
+	color: white;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.darkFocus {
+	position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.8);
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.shareButton:target, .shareButton:target + .darkFocus{
+    display:block;
+    opacity:1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+	margin-left: 50px;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+	margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    display: block;
+    transition: 0.3s
+}
+
+.MOBheader {
+	width: 90%;
+	height: 20pt;
+	box-shadow: 0px 0px 10px 4px rgba(0,0,0,.1);
+	padding: 20pt 5%;
+	margin-bottom: 30pt;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 20;
+}
+
+.MOBlogo {
+	background-image: url(../../images/NPS/resources/Logo/justLogo.png);
+	height: 24pt;
+	width: 50pt;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: auto;
+	flex-grow: 3;
+	order: 2;
+}
+
+.MOBurgentDiv {
+	height: 22pt;
+	width: 32pt;
+	order: 3;
+}
+
+.MOBurgent {
+	fill: #8E8E8E;
+}
+
+.MOBurgent::before {
+	filter: drop-shadow(0pt 5pt 9pt #909090);
+	fill: red;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.MOBurgent:hover {
+  opacity: 1;
+}
+
+.MOBleftMenu {
+	background-image: url(../../images/NPS/resources/pages/all/leftMenu.png);
+	height: 14pt;
+	width: 24pt;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	order: 1;
+	margin-top: 5pt;
+}
+
+.MOBfooter {
+	height: 50pt;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(0,0,0,.8);
+	-webkit-backdrop-filter: blur(5px);
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.MOBsmolNavMage {
+	width: 30pt;
+	height: 30pt;
+	border-radius: 3pt;
+	border: 1pt solid white;
+}
+
+.MOBsmolNavMageContainer {
+	margin: 10pt 5%;
+	order: 1;
+}
+	
+.MOBmainText {
+	width: 180pt;
+	padding: 10pt;
+	margin: 30vh 0% 0% 10%;
+	border-radius: 10pt;
+}
+	
+.blurb a{
+	text-decoration: underline;
+	font-weight: 900;
+}
+	
+.blurb {
+	border-radius: 10px;
+	
+	font-size: 13pt;
+	line-height: 16pt;
+	font-weight: 500;
+}
+	
+.blurbNewsPosition {
+	margin: 50px 40px 0px;
+	padding: 15px;
+}
+	
+.blurbNews1Position {
+	margin: 130px 40px 0px;
+	padding: 15px;
+}
+
+.blurbNewsLastPosition {
+	margin: 50px 40px 100px;
+	padding: 15px;
+}
+
+.newsPic {
+	height: 130px;
+	width: 130px;
+	border-radius: 10px;
+	float: right;
+	overflow: hidden;
+	margin: 10px 10px 10px 40px;
+}
+	
+.MOBFormHolder {
+	width: 90%;
+	padding: 20pt;
+	margin: 40pt auto;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+	
+.MOBFormTextStyle {
+	margin: 5pt auto 20pt;
+	height: 20pt;
+	width: 96%;
+}
+
+.MOBFormButtonStyle {
+	margin: 0px auto;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	background: #8a8a8a;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+	
+textarea {
+ 	margin: 5pt auto 20pt;
+	height: 100pt;
+	width: 98%;
+}
+	
+.MOBOuriNfo {
+	padding: 20pt;
+	margin: 140px auto 0px;
+	width: 90%;
+	border-radius: 10px;
+	box-sizing: border-box;
+}
+	
+.MOBOuriNfo a {
+	text-decoration: underline;
+	font-weight: 500;
+}
+
+.youTubeVid {
+	width: 80%;
+	display: block;
+	margin: 130px auto 0px;
+	box-sizing: border-box;
+	-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); /*ios 7 border-radius-bug */
+	-webkit-transform: rotate(0.000001deg); /*mac os 10.6 safari 5 border-radius-bug */
+	-webkit-border-radius: 10px; 
+	-moz-border-radius: 10px;
+	border-radius: 10px; 
+	overflow: hidden; 
+}
+
+.exploreHolder {
+	width: 80%;
+	margin: 40pt auto 40pt ;
+	border-radius: 10px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.findYourPark {
+	width: 80%;
+	margin: 0pt auto 90pt;
+	border-radius: 10px;
+	padding: 10px 20px;
+	box-sizing: border-box;
+}
+
+.selectCenter {
+	width: 60%;
+	display: block;
+	margin: 10pt auto;
+}
+	
+		
+	.MOBaboutiTem {
+		width: 80%;
+		display: block;
+		box-sizing: border-box;
+		margin: 90pt auto;
+		padding: 15pt;
+		border-radius: 10px;
+	}
+	
+	.MOBaboutiTem  a{
+		text-decoration: underline;
+		font-size: 18pt;
+		font-weight: 700;
+	}
+	
+	.MOBmonthChoose {
+		
+	}
+	
+	.MOBdatePicker {
+		margin: 130px auto 0px;
+		width: 80%;
+		padding: 20pt;
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+	
+	.MOBPlanSubmit {
+		float: right;
+		height: 50pt;
+	}
+	
+	.MOBprivacyDetails {
+		width: 87%;
+		box-sizing: border-box;
+		margin: 100px auto;
+		padding: 20pt;
+		border-radius: 10px;
+	}
+	
+}
+
+@media (max-width:399px){
+
+.desktop {
+	display: none;
+}
+	
+.mobile {
+	display: block;
+}
+
+.MOBvibrancyLight {
+	background-color: rgba(255,255,255,0.70);
+	-webkit-backdrop-filter:blur(10px);
+	box-shadow: 3px 0px 40px 2px rgba(0,0,0,.3);
+}
+
+.MOBvibrancyDark {
+	background-color: rgba(0,0,0,0.70);
+	-webkit-backdrop-filter:blur(20px);
+	box-shadow: 3px 0px 40px 2px rgba(0,0,0,.3);
+	color: white;
+}
+
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 100; /* Stay on top */
+    top: 0;
+    left: 0;
+    background-color: #111; /* Black*/
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+.darkFocus {
+	position:fixed;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,0.8);
+    z-index:5;
+    width:100%;
+    height:100%;
+    display:none;
+}
+
+.shareButton:target, .shareButton:target + .darkFocus{
+    display:block;
+    opacity:1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+	margin-left: 50px;
+}
+
+/* The navigation menu links */
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+	margin-top: 10px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #FFF;
+    display: block;
+    transition: 0.3s
+}
+
+.MOBheader {
+	width: 90%;
+	height: 20pt;
+	box-shadow: 0px 0px 10px 4px rgba(0,0,0,.1);
+	padding: 20pt 5%;
+	margin-bottom: 30pt;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+	z-index: 20;
+}
+
+.MOBlogo {
+	background-image: url(../../images/NPS/resources/Logo/justLogo.png);
+	height: 24pt;
+	width: 50pt;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: auto;
+	flex-grow: 3;
+	order: 2;
+}
+
+.MOBurgentDiv {
+	height: 22pt;
+	width: 32pt;
+	order: 3;
+}
+
+.MOBurgent {
+	fill: #8E8E8E;
+}
+
+.MOBurgent::before {
+	filter: drop-shadow(0pt 5pt 9pt #909090);
+	fill: red;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.MOBurgent:hover {
+  opacity: 1;
+}
+
+.MOBleftMenu {
+	background-image: url(../../images/NPS/resources/pages/all/leftMenu.png);
+	height: 14pt;
+	width: 24pt;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	order: 1;
+	margin-top: 5pt;
+}
+
+.MOBfooter {
+	height: 50pt;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	background-color: rgba(0,0,0,.8);
+	-webkit-backdrop-filter: blur(5px);
+	display: inline-flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.MOBsmolNavMage {
+	width: 30pt;
+	height: 30pt;
+	border-radius: 3pt;
+	border: 1pt solid white;
+}
+
+.MOBsmolNavMageContainer {
+	margin: 10pt 5%;
+	order: 1;
+}
+	
+.MOBmainText {
+	width: 180pt;
+	padding: 10pt;
+	margin: 25vh auto 0%;
+	border-radius: 10pt;
+}
+	
+.blurb {
+	border-radius: 10px;
+	
+	font-size: 13pt;
+	line-height: 16pt;
+	font-weight: 500;
+}
+	
+.blurb a{
+	text-decoration: underline;
+	font-weight: 900;
+}
+	
+.blurbNewsPosition {
+	margin: 50px 10px 0px;
+	padding: 15px;
+}
+	
+.blurbNews1Position {
+	margin: 100px 10px 0px;
+	padding: 15px;
+}
+
+.blurbNewsLastPosition {
+	margin: 50px 10px 100px;
+	padding: 15px;
+}
+
+.newsPic {
+	height: 130px;
+	width: 130px;
+	border-radius: 10px;
+	overflow: hidden;
+	margin: 10px auto 20px;
+}
+	
+.MOBFormHolder {
+	width: 90%;
+	padding: 20pt;
+	margin: 40pt auto;
+	box-sizing: border-box;
+	border-radius: 10px;
+}
+	
+.MOBFormTextStyle {
+	margin: 5pt auto 20pt;
+	height: 20pt;
+	width: 96%;
+}
+
+.MOBFormButtonStyle {
+	margin: 0px auto;
+	width: 100%;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border-radius: 10px;
+	color: #ffffff;
+	font-size: 20px;
+	background: #8a8a8a;
+	padding: 10px 20px 10px 20px;
+	text-decoration: none;
+}
+	
+textarea {
+ 	margin: 5pt auto 20pt;
+	height: 100pt;
+	width: 98%;
+}
+	
+.MOBOuriNfo {
+	padding: 20pt;
+	margin: 140px auto 50px;
+	width: 90%;
+	border-radius: 10px;
+	font-size: 16pt;
+	box-sizing: border-box;
+}
+	
+.MOBOuriNfo a {
+	text-decoration: underline;
+	font-weight: 500;
+}
+	
+	.youTubeVid {
+		width: 80%;
+		display: block;
+		margin: 130px auto 0px;
+		box-sizing: border-box;
+		-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%); /*ios 7 border-radius-bug */
+		-webkit-border-radius: 10px; 
+		-moz-border-radius: 10px;
+		border-radius: 10px; 
+		overflow: hidden; 
+	}
+	
+	.exploreHolder {
+		width: 80%;
+		margin: 40pt auto 40pt ;
+		border-radius: 10px;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+	
+	.findYourPark {
+		width: 80%;
+		margin: 0pt auto 90pt;
+		border-radius: 10px;
+		padding: 10px 20px;
+		box-sizing: border-box;
+	}
+	
+	.selectCenter {
+		width: 60%;
+		display: block;
+		margin: 10pt auto;
+	}
+	
+	.MOBaboutiTem {
+		width: 80%;
+		display: block;
+		box-sizing: border-box;
+		margin: 90pt auto;
+		padding: 15pt;
+		border-radius: 10px;
+	}
+	
+	.MOBaboutiTem  a{
+		text-decoration: underline;
+		font-size: 18pt;
+		font-weight: 700;
+	}
+	
+	.MOBmonthChoose {
+		
+	}
+	
+	.MOBdatePicker {
+		margin: 130px auto 0px;
+		width: 80%;
+		padding: 20pt;
+		box-sizing: border-box;
+		border-radius: 10px;
+	}
+	
+	.MOBprivacyDetails {
+		width: 87%;
+		box-sizing: border-box;
+		margin: 100px auto;
+		padding: 20pt;
+		border-radius: 10px;
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Gallery Homepage // Quint Bailey</title>
+<style type="text/css">
+
+.content {
+	position: relative
+}
+
+.HomesliceHolder {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-48.5%, 40%);
+	width: 97%;
+	height: 380px;  
+}
+
+.Homeslice {
+	width: 20%;
+	margin: 10px 3%;
+	padding: 40px;
+	height: 300px;
+	float: left;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+	font-size: x-large;
+	font-weight: 800;
+	text-align: left;
+	border-radius: 20px;
+	transition: font-size .2s;
+	text-decoration: none;
+	background-color: rgba(255,255,255,1.00);
+	box-shadow: 0px 30px 90px -5px rgba(0,0,0,.7);
+	overflow: hidden;
+}
+
+.Homeslice:hover {
+	font-size: xx-large;
+	transition: font-size .2s;
+}
+	
+	a {
+		color: inherit;
+	}
+	
+	.homeSliceTN {
+		width: 100%;
+		margin: 40px 0px 0px 0px;
+		box-shadow: 0px 0px 30px -5px rgba(0,0,0,.2);
+		border-radius: 10px;
+	}
+	
+</style>
+</head>
+
+<body>
+
+<div class="content">
+	
+	<div class="HomesliceHolder">
+
+		<a href="lightbox/examples/lightboxDemo.html"><div class="Homeslice">
+			First Gallery
+	  <img class="homeSliceTN" src="../../images/exercises/ex6/gal1_tn.png" width="300" height="189" alt=""/> </div></a>
+
+		<a href="slidesJS/examples/playing/index.html"><div class="Homeslice">
+			Second Gallery
+			<img class="homeSliceTN" src="../../images/exercises/ex6/gal2TN.png">
+		</div></a>
+
+		<a href="gal3.html"><div class="Homeslice">
+			Third Gallery
+	    <img class="homeSliceTN" src="../../images/exercises/ex6/gal3_tn.png"/> </div>
+</a>
+	</div>
+	
+</div>
+
+</body>
+</html>

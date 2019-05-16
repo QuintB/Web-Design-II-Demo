@@ -1,0 +1,315 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="UTF-8">
+
+<title>Quint Bailey — Web Design II — Exercise 2</title>
+
+<style>
+
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	
+	html {
+	background: url(../images/exercises/exercise2/background.jpeg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	}
+	
+	/*Nav and Ads*/
+	
+	body {
+		margin: 0px 0px;
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+	}
+	
+	.navHolder {
+		width: 100%;
+		height: 170px;
+		margin: 0px auto;
+	}
+	
+	.navAd {
+		width: 100%;
+		height: 100px;
+		
+		border-radius: 0px /*10px 0px 0px*/;
+		background-image: url(../images/exercises/exercise2/topad.png);
+		background-size: contain;
+		
+		
+		/*background-color: rgba(0,0,0,.4);*/
+	}
+	
+	.navList {
+		/*background-color: yellow;*/
+		
+		margin: 0px auto;
+		height: 50px;
+		width: 53%;
+		
+		border-radius: 0px 0px 10px 10px;
+		
+		background-color: rgba(255,255,255,.4);
+		-webkit-backdrop-filter: blur(30px);
+		
+		font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
+		font-size: 15pt;
+		font-weight: normal;
+		list-style-type: none;
+	}
+	
+	.navListItem {
+		float: left;
+		display: block;
+		margin: 12px 20px;
+	}
+	
+	.navListItem:hover {
+		/*font-weight: bold;*/
+		text-decoration: underline;
+	}
+	
+	/*main*/
+	
+	.main {
+		height: 600px;
+		width: 100%;
+		/*background-color: red;*/
+	}
+	
+	.mainHolder {
+		float: left;
+		
+		width: 500px;
+		height: 450px;
+		
+		margin-top: 50px;
+		margin-left: 30px;
+		padding: 30px;
+		
+		border-radius: 10px;
+		background-color: rgba(255,255,255,.4);
+		-webkit-backdrop-filter: blur(30px);
+		box-shadow: 3px 0px 50px -5px rgba(0,0,0,.3);
+	}
+	
+	.mainnav {
+		font-weight: bold;
+		font-size: 20pt;
+	}
+	
+	.mainText {
+		line-height: 15pt;
+	}
+	
+	/*sidebar*/
+	
+	.sidebar {
+		float: left;
+		
+		height: 470px;
+		width: 180px;
+		
+		margin-top: 50px;
+		margin-left: 29px;
+		padding: 20px;
+		
+		border-radius: 10px;
+		background-color: rgba(255,255,255,.4);
+		-webkit-backdrop-filter: blur(30px);
+		box-shadow: 3px 0px 50px -5px rgba(0,0,0,.3);
+	}	
+	
+	.sidebarnav {
+		font-weight: bold;
+		font-size: 16pt;
+	}
+	
+	.sidebarText {
+		
+	}
+
+	.sidebarImage {
+		margin: 10px 0px 20px;
+		
+		border-radius: 10px;
+		box-shadow: 3px 0px 20px -5px rgba(0,0,0,.3)
+	}
+	
+	/*newsletter*/
+	
+	.newsletterHolder {
+		float: left;
+		
+		height: 140px;
+		width: 180px;
+		
+		margin-top: 50px;
+		margin-left: 30px;
+		margin-bottom: 30px;
+		padding: 20px;
+		
+		border-radius: 10px;
+		background-color: rgba(255,255,255,.4);
+		-webkit-backdrop-filter: blur(30px);
+		box-shadow: 3px 0px 50px -5px rgba(0,0,0,.3);
+	}
+	
+	.newsletternav {
+		font-weight: bold;
+		font-size: 17pt;
+	}
+	
+	.newsletterText {
+		
+	}
+	
+	.newsletterButton {
+		margin: 0px auto;
+	}
+	
+	.newsletterEmail {
+		margin-top: 5px;
+		font-size: 13pt;
+		width: 180px;
+	}
+	
+	/*right side ad*/
+	
+	.sideAd {
+		height: 300px;
+		width: 220px;
+		margin-left: 30px;
+		margin-top: 0px;
+		
+		float: left;
+		
+		border-radius: 10px;
+		background-color: rgba(255,255,255,.4);
+		box-shadow: 3px 0px 50px -5px rgba(0,0,0,.3);
+		
+		-webkit-backdrop-filter: blur(30px);
+	}
+	
+	.sideAdImage {
+		border-radius: 10px;
+	}
+	
+</style>
+
+</head>
+
+<body>
+
+	<div class="navHolder">
+		<div class="navAd">
+		<img src="../images/exercises/exercise2/topad.png" width="1075" height="100" alt=""/>
+	  </div>
+		
+		<ul class="navList">
+			<li class="navListItem">Home</li>
+			<li class="navListItem">About</li>
+			<li class="navListItem">Talks</li>
+			<li class="navListItem">Hire</li>
+			<li class="navListItem">Locations</li>
+			<li class="navListItem">Books</li>
+		</ul>
+	</div>
+	
+<div class="main">
+	
+<div class="sidebar">
+		
+	<a href="#">
+		<div class="sidebarnav">
+			Glasgow Tour
+  		</div>
+		<div class="sidebarText">
+			Tour Glasgow with me.
+  		</div>
+		<div>
+			<img class="sidebarImage" src="../images/exercises/exercise2/paris.jpeg" width="180" height="120" alt=""/>
+		</div>
+	</a>
+		
+	<a href="#">
+		<div class="sidebarnav">
+			New Book
+ 		</div>
+		<div class="sidebarText">
+			I just released a new book. Read it <strong>here</strong>.
+  		</div>
+		<div class="sidebarImage">
+		</div>
+	</a>
+		
+	<a href="#">
+		<div class="sidebarnav">
+			Shopping Spree
+  		</div>
+		<div class="sidebarText">
+			You can never own too much stuff!
+  		</div>
+		<div>
+	    	<img class="sidebarImage" src="../images/exercises/exercise2/shopping.jpeg" width="180" height="120" alt=""/>
+	    </div>
+	</a>
+		
+</div>
+
+<div class="mainHolder">
+	<div class="mainnav">
+		My Newest Things
+	</div>
+	<div class="mainText">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ut nunc sed tortor varius dapibus. Nulla facilisi. Fusce dignissim consectetur justo ac dictum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus ut diam sed risus semper mattis in et odio. Mauris et massa placerat sem dapibus sagittis ac non risus. Etiam iaculis magna purus, id egestas libero tincidunt vel. Nullam efficitur, nisl a pulvinar congue, metus mauris auctor odio, nec venenatis sapien libero nec est. Maecenas vitae felis et libero rhoncus molestie ut in mi. Curabitur sed dui et dui egestas interdum eu eget enim. Vivamus euismod leo sit amet commodo ornare. Vivamus pulvinar ullamcorper viverra. Quisque in laoreet velit, ut accumsan massa. In lobortis, ex eget interdum dictum, nulla nibh condimentum tortor, in mattis nulla mi vitae enim.
+		<br><br>
+		Phasellus in egestas purus, ac commodo erat. Nullam at augue fringilla, egestas nibh ut, ultricies magna. Duis finibus nunc sed efficitur dictum. Pellentesque sed condimentum felis, in volutpat nisl. Ut volutpat leo ac fermentum vulputate. Donec at enim sit amet elit ultrices placerat. Nulla eget augue ac quam euismod imperdiet egestas ac elit. Sed mi eros, laoreet nec mi id, tincidunt efficitur elit. Etiam viverra bibendum nisl, non malesuada turpis rutrum at.
+	</div>
+	
+</div>
+
+<div class="newsletterHolder">
+	<div class="newsletternav">
+		Join my 
+	<br>Newsletter!
+	</div>
+	<div class="newsletterText">
+		Get the latest on my most recent moves.
+	</div>
+	
+		<input type="email" class="newsletterEmail" placeholder="me@example.com">
+		
+		<input type="button" class="newsletterButton" value="submit">
+		
+</div>
+
+<div class="sideAd">
+  <img class="sideAdImage" src="../images/exercises/exercise2/sidead.png" width="220" height="300" alt=""/> 
+ </div>
+
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
